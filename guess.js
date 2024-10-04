@@ -9,7 +9,7 @@ let currentImage = 0;
 let cardFlipped = false;
 
 function loadImage() {
-    currentImage = Math.floor(Math.random() * 4);
+    currentImage = Math.floor(Math.random() * 3); // Corrected from 4 to 3
     document.getElementById('hiddenImage').src = images[currentImage].img;
     document.getElementById('flashcard').classList.remove('flipped');  // Ensure the card is reset to front
 }
@@ -26,7 +26,7 @@ function checkAnswer(choice) {
             score++;
             alert("Correct!");
         } else {
-            alert("Wrong!");
+            alert(`Wrong! The correct answer was: ${images[currentImage].img}`);
         }
         updateScoreboard();
 
