@@ -3,30 +3,34 @@ let images = [
     { img: "images/Falcon.jpg", correctChoice: 2 },
     { img: "images/Killer-Whale.jpg", correctChoice: 3 }
 ];
+
 let score = 0;
 let plays = 0;
 let currentImage = 0;
 let cardFlipped = false;
 
 function loadImage() {
-    currentImage = Math.floor(Math.random() * 3); // Corrected from 4 to 3
-    document.getElementById('hiddenImage').src = images[currentImage].img;
-    document.getElementById('flashcard').classList.remove('flipped');  // Ensure the card is reset to front
+    currentImage = Math.floor(Math.random() * images.length); // Select a random image index
+    document.getElementById('hiddenImage').src = ""; // Clear the image initially
+    document.getElementById('flashcard').classList.remove('flipped');  // Reset to front
 }
 
 function checkAnswer(choice) {
     if (cardFlipped) return; // Prevent multiple clicks before flip completes
 
-    cardFlipped = true;
-    document.getElementById('flashcard').classList.add('flipped'); // Flip the card to show the image
-
     plays++;
+    cardFlipped = true;
+
+    // Flip the card to show the image
+    document.getElementById('flashcard').classList.add('flipped');
+    document.getElementById('hiddenImage').src = images[currentImage].img; // Show the image
+
     setTimeout(() => {
         if (choice === images[currentImage].correctChoice) {
             score++;
             alert("Correct!");
         } else {
-            alert(`Wrong! The correct answer was: ${images[currentImage].img}`);
+            alert("Wrong!");
         }
         updateScoreboard();
 
@@ -36,10 +40,10 @@ function checkAnswer(choice) {
                 resetGame();
             }, 500);
         } else {
+            loadImage(); // Load the next image for the next turn
             cardFlipped = false; // Allow further interaction
-            loadImage();
         }
-    }, 1000); // Delay to let the flip animation complete
+    }, 1000); // Keep the card flipped for a moment before showing the result
 }
 
 function updateScoreboard() {
