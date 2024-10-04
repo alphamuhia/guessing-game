@@ -1,7 +1,7 @@
 let images = [
-    { img: "images/Horse.jpg", correctChoice: 1 },
-    { img: "images/Falcon.jpg", correctChoice: 2 },
-    { img: "images/Killer-Whale.jpg", correctChoice: 3 }
+    { img: "Horse.jpg", correctChoice: 1 },
+    { img: "Falcon.jpg", correctChoice: 2 },
+    { img: "Killer-Whale.jpg", correctChoice: 3 }
 ];
 
 let score = 0;
