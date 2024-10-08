@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(to top,aqua,aquamarine,antiquewhite,white);
 }
 
 .game-container {
@@ -15,7 +15,7 @@ body {
 .flashcard {
     width: 400px;
     height: 400px;
-    perspective: 1000px; /* Enable 3D effect */
+    perspective: 1000px; 
     margin-bottom: 20px;
 }
 
@@ -33,7 +33,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    animation: loop 1s linear infinite;
+}
+@keyframes loop {
+    0%{color: red;}
+    50%{color: green;}
+    100%{color: blue;}
 }
 
 .back {

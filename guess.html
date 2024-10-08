@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="guess.css">
 </head>
 <body>
+    <aside>
+        <div></div>
+    </aside>
     <div class="game-container">
         <div class="flashcard" id="flashcard" onclick="flipCard()">
             <div class="front" id="front">
-                <p>Guess the image!</p>
+                <p>Guess the animal behind the card!</p>
             </div>
             <div class="back" id="back">
                 <img id="hiddenImage" src="" alt="Image to Guess">
             </div>
         </div>
         <div class="choices">
-            <button class="choice" id="Horse" onclick="checkAnswer(1)">Horse </button>
-            <button class="choice" id="Falcon" onclick="checkAnswer(2)">Falcon </button>
-            <button class="choice" id="Killer-Whale" onclick="checkAnswer(3)">Killer Whale </button>
+            <button class="choice" id="Horse" onclick="checkAnswer(1)">Horse &#128014</button>
+            <button class="choice" id="Falcon" onclick="checkAnswer(2)">Falcon 🦅</button>
+            <button class="choice" id="Orca" onclick="checkAnswer(3)">Orca 🐋𓇢𓆸</button>
         </div>
         <div class="scoreboard">
             <p>Score: <span id="score">0</span></p>
@@ -27,6 +30,9 @@
         </div>
         <button id="reset" onclick="resetGame()">Reset Game</button>
     </div>
+    <aside>
+
+    </aside>
 
     <script src="guess.js"></script>
 </body>

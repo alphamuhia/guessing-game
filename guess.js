@@ -10,18 +10,20 @@ let currentImage = 0;
 let cardFlipped = false;
 
 function loadImage() {
-    currentImage = Math.floor(Math.random() * images.length); // Select a random image index
-    document.getElementById('hiddenImage').src = ""; // Clear the image initially
-    document.getElementById('flashcard').classList.remove('flipped');  // Reset to front
+    // select a random image
+    currentImage = Math.floor(Math.random() * images.length); 
+    // clear the image 
+    document.getElementById('hiddenImage').src = "";
+    // Reset to front
+    document.getElementById('flashcard').classList.remove('flipped');  
 }
 
 function checkAnswer(choice) {
-    if (cardFlipped) return; // Prevent multiple clicks before flip completes
+    if (cardFlipped) return; 
 
     plays++;
     cardFlipped = true;
 
-    // Flip the card to show the image
     document.getElementById('flashcard').classList.add('flipped');
     document.getElementById('hiddenImage').src = images[currentImage].img; // Show the image
 
@@ -40,10 +42,10 @@ function checkAnswer(choice) {
                 resetGame();
             }, 500);
         } else {
-            loadImage(); // Load the next image for the next turn
-            cardFlipped = false; // Allow further interaction
+            loadImage(); 
+            cardFlipped = false; 
         }
-    }, 1000); // Keep the card flipped for a moment before showing the result
+    }, 1000); 
 }
 
 function updateScoreboard() {
@@ -58,10 +60,8 @@ function resetGame() {
     updateScoreboard();
     loadImage();
 }
-
-// Start the game when the page loads
+// start the game
 window.onload = loadImage;
 
 function flipCard() {
-    // No need to manually flip. The checkAnswer will trigger the flip.
 }
