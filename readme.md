@@ -15,3 +15,31 @@ Game Instructions
 -If you guess incorrectly three times, a hint will be provided to help you.
 -The game continues until you correctly guess all the dinosaurs.
 
+correct answer corresponding to numbers
+
+
+1. Tyrannosaurus rex                                        26.Baryonyx
+2.Triceratops                                               27.Utahraptor
+3.Velociraptor                                              28.Protoceratops
+4.Stegosaurus                                               29.Dunkleosteus
+5.Brachiosaurus                                             30.Theropoda 
+6.Allosaurus                                                31.Argentinosaurus
+7.Spinosaurus                                               32.Hesperornis
+8.Ankylosaurus                                              33.Sinornithosaurus
+9.Diplodocus                                                34.Nodosaurus
+10.Parasaurolophus                                          35.Matheronodon
+11.Iguanodon                                                36.Lurdusaurus         
+12.Pteranodon                                               37.Eotrachodon
+13.Apatosaurus                                              38.Rhabdodon
+14.Carnotaurus                                              39.Jobaria
+15.Megalosaurus                                             40.Hipsilophodon
+16.Therizinosaurus                                          41.Choyrodon
+17.Styracosaurus                                            42.Dreadnoughtus 
+18.Hadrosaurus                                              43.Elaphrosaurus
+19.Oviraptor                                                44.Fukuisaurus
+20.Microraptor                                              45.Hypsilophodon
+21.Giganotosaurus                                           46.Incisivosaurus
+22.Suchomimus                                               47.Jeholornis
+23.Eoraptor                                                 48.Morelladon 
+24.Pachycephalosaurus                                       49.Notohypsilophodon 
+25.Cryolophosaurus                                          50.Zalmoxes
