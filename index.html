@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <aside>
-        <div></div>
-    </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DINOSAUR GAME</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul class="list">
+      <li>Hadrosaurus</li>
+      <li>Argentinosaurus</li>
+      <li>Microraptor</li>
+      <li>Allosaurus</li>
+      <li>Velociraptor</li>
+      <li>Protoceratops</li>
+      <li>Eoraptor</li>
+      <li>Spinosaurus</li>
+      <li>Dreadnoughtus</li>
+      <li>Brachiosaurus</li>
+      <li>Therizinosaurus</li>
+      <li>Oviraptor</li>
+      <li>Jobaria</li>
+      <li>Utahraptor</li>
+      <li>Iguanodon</li>
+      <li>Matheronodon</li>
+      <li>Styracosaurus</li>
+      <li>Hesperornis</li>
+      <li>Megalosaurus</li>
+      <li>Diplodocus</li>
+      <li>Hypsilophodon</li>
+      <li>Suchomimus</li>
+      <li>Morelladon</li>
+      <li>Apatosaurus</li>
+      <li>Ankylosaurus</li>
+    </ul>
     <div class="game-container">
-        <div class="flashcard" id="flashcard" onclick="flipCard()">
-            <div class="front" id="front">
-                <p>Guess the animal behind the card!</p>
-            </div>
-            <div class="back" id="back">
-                <img id="hiddenImage" src="" alt="Image to Guess">
-            </div>
-        </div>
-        <div class="choices">
-            <button class="choice" id="Horse" onclick="checkAnswer(1)">Horse &#128014</button>
-            <button class="choice" id="Falcon" onclick="checkAnswer(2)">Falcon 🦅</button>
-            <button class="choice" id="Orca" onclick="checkAnswer(3)">Orca 🐋𓇢𓆸</button>
-        </div>
-        <div class="scoreboard">
-            <p>Score: <span id="score">0</span></p>
-            <p>Plays: <span id="plays">0</span> / 3</p>
-        </div>
-        <button id="reset" onclick="resetGame()">Reset Game</button>
+      <h1>How well you know the Dinosaurs</h1>
+      <div class="flashcard" id="flashcard">
+        <img
+          id="image"
+          src="image1.jpg"
+          alt="Name the Dinosaur"
+          class="hidden"
+        />
+      </div>
+      <input type="text" id="NametheDinosaur" placeholder="Enter the name" />
+      <button class="btn" id="submitGuess">Submit</button>
+      <p id="resultMessage"></p>
     </div>
-    <aside>
-
-    </aside>
+    <ul class="list">
+        <li>Pachycephalosaurus</li>
+      <li>Giganotosaurus</li>
+      <li>Notohypsilophodon</li>
+      <li>Fukuisaurus</li>
+      <li>Tyrannosaurus rex</li>
+      <li>Stegosaurus</li>
+      <li>Choyrodon</li>
+      <li>Cryolophosaurus</li>
+      <li>Parasaurolophus</li>
+      <li>Incisivosaurus</li>
+      <li>Carnotaurus</li>
+      <li>Dunkleosteus</li>
+      <li>Theropoda</li>
+      <li>Sinornithosaurus</li>
+      <li>Baryonyx</li>
+      <li>Nodosaurus</li>
+      <li>Lurdusaurus</li>
+      <li>Elaphrosaurus</li>
+      <li>Jeholornis</li>
+      <li>Triceratops</li>
+      <li>Rhabdodon</li>
+      <li>Zalmoxes</li>
+      <li>Pteranodon</li>
+      <li>Eotrachodon</li>
+      <li>Hipsilophodon</li>
+    </ul>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
