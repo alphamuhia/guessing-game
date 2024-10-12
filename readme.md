@@ -48,7 +48,7 @@
 insects
 
 
-1 leafcutter  Ant           26 Root Weevil
+1 leafcutter Ant           26 Root Weevil
 2 Housefly                  27 Midge 
 3 Cockroach                 28 Scarab Beetle
 4 Butterfly                 29 Boxelder Bug 
@@ -68,7 +68,7 @@ insects
 18 Wasp                     43 Tiger moth
 19 fire ant                 44 California Dogface Butterfly
 20 Mayfly                   45 Hawkmoth 
-21 spider                   46 omus audouini
+21 spider                   46 Omus audouini
 22 Horsefly                 47 St. Helena Giant Earwig 
 23 Silverfish               48 Io Moth
 24 Bark Beetle              49 Mauritius Horn Butterfly
@@ -77,29 +77,29 @@ insects
 
 countries
 
-1                    
-2                   
-3                           
-4  
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
+1 Tanzania                  26 Cameroon
+2 Uganda                    27 Ethiopia
+3 Kenya                     28 South sudan
+4 Burundi                   29 Togo
+5 Rwanda                    30 Guinea
+6 somali                    31 Sao Tome and Principe
+7 Djibuti                   32 Mali
+8 Malawi                    33 Russia
+9 Mozanbique                34 kazakhstan
+10 Eritrea                  35 Mongolia
+11 Congo                    36 North Korea
+12 Sudan                    37 Iran
+13 Nigeria                  38 Turkey
+14 Niger                    39 Nepal
+15 South Africa             40 Qatar
+16 lesotho                  41 Pakistan
+17 Madagascar               42 Philippines
+18 Egypt                    43 Sri Lanka
+19 Tunisia                  44 Ecuador
+20 Mauritania                45 Suriname
+21 Ghana                     46 Peru
+22 Benin                     47 Guyana
+23 Guinea Bissau             48 Bolivia
+24 Senegal                   49 Greenland
+25 Bukina Faso               50 Bermuda
 
