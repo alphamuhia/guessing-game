@@ -1,81 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DINOSAUR GAME</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <ul class="list">
-      <li>Hadrosaurus</li>
-      <li>Argentinosaurus</li>
-      <li>Microraptor</li>
-      <li>Allosaurus</li>
-      <li>Velociraptor</li>
-      <li>Protoceratops</li>
-      <li>Eoraptor</li>
-      <li>Spinosaurus</li>
-      <li>Dreadnoughtus</li>
-      <li>Brachiosaurus</li>
-      <li>Therizinosaurus</li>
-      <li>Oviraptor</li>
-      <li>Jobaria</li>
-      <li>Utahraptor</li>
-      <li>Iguanodon</li>
-      <li>Matheronodon</li>
-      <li>Styracosaurus</li>
-      <li>Hesperornis</li>
-      <li>Megalosaurus</li>
-      <li>Diplodocus</li>
-      <li>Hypsilophodon</li>
-      <li>Suchomimus</li>
-      <li>Morelladon</li>
-      <li>Apatosaurus</li>
-      <li>Ankylosaurus</li>
-    </ul>
-    <div class="game-container">
-      <h1>How well you know the Dinosaurs</h1>
-      <div class="flashcard" id="flashcard">
-        <img
-          id="image"
-          src="image1.jpg"
-          alt="Name the Dinosaur"
-          class="hidden"
-        />
-      </div>
-      <input type="text" id="NametheDinosaur" placeholder="Enter the name" />
-      <button class="btn" id="submitGuess">Submit</button>
-      <p id="resultMessage"></p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="homepage" id="homepage">
+    <div>
+      <h1>Welcome!</h1>
+      <p style="color: #ffffff; font-weight: bold;"> -This is a game where an image is dispayed to you and you have to input the name of the image. There are diffrent cartegories to select from.</p>
+      <p style="color: #ffffff; font-weight: bold;">-If you end up getting the wrong answer three times a hint will be provided</p>
+      <p style="color: #ffffff; font-weight: bold;">-The game is currently in development so there are limited images however in the future a whole dictionary will be added.</p>
+      <p style="color: #ffffff; font-weight: bold;">-Thank you and enjoy</p>
+      <button onclick="showCategoryMenu()">Start</button>
+      <button onclick="quitToHomePage()">Quit</button>
     </div>
-    <ul class="list">
-        <li>Pachycephalosaurus</li>
-      <li>Giganotosaurus</li>
-      <li>Notohypsilophodon</li>
-      <li>Fukuisaurus</li>
-      <li>Tyrannosaurus rex</li>
-      <li>Stegosaurus</li>
-      <li>Choyrodon</li>
-      <li>Cryolophosaurus</li>
-      <li>Parasaurolophus</li>
-      <li>Incisivosaurus</li>
-      <li>Carnotaurus</li>
-      <li>Dunkleosteus</li>
-      <li>Theropoda</li>
-      <li>Sinornithosaurus</li>
-      <li>Baryonyx</li>
-      <li>Nodosaurus</li>
-      <li>Lurdusaurus</li>
-      <li>Elaphrosaurus</li>
-      <li>Jeholornis</li>
-      <li>Triceratops</li>
-      <li>Rhabdodon</li>
-      <li>Zalmoxes</li>
-      <li>Pteranodon</li>
-      <li>Eotrachodon</li>
-      <li>Hipsilophodon</li>
-    </ul>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <section id="categorypage" class="hidden">
+    <div class="cat" id="categoryMenu">
+      <h1>Select Category</h1>
+      <button id="Dinosaur">Dinosaurs</button>
+      <button id="Country">Country</button>
+      <button id="Insects">Insects</button>
+    </div>
+  </section>
+
+  <section id="playgamepage" class="hidden">
+    <div class="game-play" id="game-play">
+      <h1 id="gameTitle">How well do you know the Dinosaurs?</h1>
+      <div class="flashcard" id="flashcard">
+        <img id="image" src="" alt="Name the image" class="hidden" />
+      </div>
+      <input type="text" id="Nametheimage" placeholder="Enter the name" />
+      <button id="submitAnswer">Submit</button>
+      <button onclick="quitToHomePage()">Quit</button>
+      <p id="resultMessage"></p>
+      <ul id="list" class="hidden"></ul>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
 </html>

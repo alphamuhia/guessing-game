@@ -1,4 +1,4 @@
-let flashcards = [
+const flashcards = [
   { image: "images/1.webp", answer: "Tyrannosaurus rex" },
   { image: "images/2.webp", answer: "Triceratops" },
   { image: "images/3.jpeg", answer: "Velociraptor" },
@@ -49,63 +49,198 @@ let flashcards = [
   { image: "images/48.avif", answer: "Morelladon" },
   { image: "images/49.webp", answer: "Notohypsilophodon" },
   { image: "images/50.jpeg", answer: "Zalmoxes" },
-];
+      ];
 
-let currentIndex = 0;
-let wrongGuessCount = 0; 
-let maxWrongGuesses = 3; 
+      const countryFlashcards = [
+  {image:"images/c1.jpeg",answer:"Tanzania"},
+  {image:"images/c2.png",answer:"Uganda"},
+  {image:"images/c3.png",answer:"Kenya"},
+  {image:"images/c4.png",answer:"Burundi"},
+  {image:"images/c5.png",answer:"Rwanda"},
+  {image:"images/c6.png",answer:"Somali"},
+  {image:"images/c7.png",answer:"Djibuti"},
+  {image:"images/c8.png",answer:"Malawi"},
+  {image:"images/c9.png",answer:"Mozambique"},
+  {image:"images/c10.png",answer:"Eritrea"},
+  {image:"images/c11.jpeg",answer:"Congo"},
+  {image:"images/c12.png",answer:"Sudan"},
+  {image:"images/c13.png",answer:"Nigeria"},
+  {image:"images/c14.png",answer:"Niger"},
+  {image:"images/c15.png",answer:"South Africa"},
+  {image:"images/c16.png",answer:"Lesotho"},
+  {image:"images/c17.png",answer:"Madagascar"},
+  {image:"images/c18.png",answer:"Egypt"},
+  {image:"images/c19.png",answer:"Tunisia"},
+  {image:"images/c20.png",answer:"Mauritania"},
+  {image:"images/c21.png",answer:"Ghana"},
+  {image:"images/c22.png",answer:"Benin"},
+  {image:"images/c23.png",answer:"Guinea Bissau"},
+  {image:"images/c24.png",answer:"Senegal"},
+  {image:"images/c25.png",answer:"Burkina Faso"},
+  {image:"images/c26.png",answer:"Cameroon"},
+  {image:"images/c27.png",answer:"Ethiopia"},
+  {image:"images/c28.png",answer:"South Sudan"},
+  {image:"images/c29.png",answer:"Togo"},
+  {image:"images/c30.png",answer:"Guinea"},
+  {image:"images/c31.png",answer:"Sao Tome and Principe"},
+  {image:"images/c32.png",answer:"Mali"},
+  {image:"images/c33.png",answer:"Russia"},
+  {image:"images/c34.png",answer:"kazakhstan"},
+  {image:"images/c35.png",answer:"Mongolia"},
+  {image:"images/c36.png",answer:"North Korea"},
+  {image:"images/c37.png",answer:"Iran"},
+  {image:"images/c38.png",answer:"Turkey"},
+  {image:"images/c39.png",answer:"Nepal"},
+  {image:"images/c40.png",answer:"Qatar"},
+  {image:"images/c41.png",answer:"Pakistan"},
+  {image:"images/c42.png",answer:"Philippines"},
+  {image:"images/c43.png",answer:"Sri Lanka"},
+  {image:"images/c44.png",answer:"Ecuador"},
+  {image:"images/c45.png",answer:"Suriname"},
+  {image:"images/c46.png",answer:"Peru"},
+  {image:"images/c47.png",answer:"Guyana"},
+  {image:"images/c48.png",answer:"Bolivia"},
+  {image:"images/c49.png",answer:"Greenland"},
+  {image:"images/c50.png",answer:"Bermuda"},
+      ];
 
-let flashcardElement = document.getElementById("flashcard");
-let imageElement = document.getElementById("image");
-let nameInput = document.getElementById("NametheDinosaur");
-let resultMessage = document.getElementById("resultMessage");
-let submitGuessButton = document.getElementById("submitGuess");
+      const insectsFlashcards = [
+        { image: "images/i1.webp", answer: "" },
+        { image: "images/i2.png", answer: "" },
+        { image: "images/i3.jpeg", answer: "" },
+        { image: "images/i4.avif", answer: "" },
+        { image: "images/i5.png", answer: "" },
+        { image: "images/i6.png", answer: "" },
+        { image: "images/i7.png", answer: "" },
+        { image: "images/i8.jpeg", answer: "" },
+        { image: "images/i9.png", answer: "" },
+        { image: "images/i10.png", answer: "" },
+        { image: "images/i11.png", answer: "" },
+        { image: "images/i12.jpeg", answer: "" },
+        { image: "images/i13.jpg", answer: "" },
+        { image: "images/i14.png", answer: "" },
+        { image: "images/i15.png", answer: "" },
+        { image: "images/i16.png", answer: "" },
+        { image: "images/i17.png", answer: "" },
+        { image: "images/i18.png", answer: "" },
+        { image: "images/i19.png", answer: "" },
+        { image: "images/i20.jpeg", answer: "" },
+        { image: "images/i21.jpeg", answer: "" },
+        { image: "images/i22.png", answer: "" },
+        { image: "images/i23.png", answer: "" },
+        { image: "images/i24.png", answer: "" },
+        { image: "images/i25.jpeg", answer: "" },
+        { image: "images/i26.png", answer: "" },
+        { image: "images/i27.png", answer: "" },
+        { image: "images/i28.png", answer: "" },
+        { image: "images/i29.jpeg", answer: "" },
+        { image: "images/i30.jpg", answer: "" },
+        { image: "images/i31.jpg", answer: "" },
+        { image: "images/i32.jpeg", answer: "" },
+        { image: "images/i33.png", answer: "" },
+        { image: "images/i34.png", answer: "" },
+        { image: "images/i35.png", answer: "" },
+        { image: "images/i36.jpeg", answer: "" },
+        { image: "images/i37.jpeg", answer: "" },
+        { image: "images/i38.webp", answer: "" },
+        { image: "images/i39.jpeg", answer: "" },
+        { image: "images/i40.jpeg", answer: "" },
+        { image: "images/i41.jpg", answer: "" },
+        { image: "images/i42.png", answer: "" },
+        { image: "images/i43.png", answer: "" },
+        { image: "images/i44.jpg", answer: "" },
+        { image: "images/i45.png", answer: "" },
+        { image: "images/i46.jpg", answer: "" },
+        { image: "images/i47.jpg", answer: "" },
+        { image: "images/i48.webp", answer: "" },
+        { image: "images/i49.webp", answer: "" },
+        { image: "images/i50.webp", answer: "" },
+      ];
 
-imageElement.src = flashcards[currentIndex].image;
-imageElement.classList.remove("hidden");
+      let currentFlashcards = [];
+      let currentIndex = 0;
+      let wrongAnswerCount = 0;
+      const maxWrongAnswer = 3;
 
-submitGuessButton.addEventListener("click", () => {
-  let userAnswer = nameInput.value.trim().toLowerCase();
-  let correctAnswer = flashcards[currentIndex].answer.toLowerCase();
+      const homepage = document.getElementById("homepage");
+      const categoryMenu = document.getElementById("categoryMenu");
+      const gamePlay = document.getElementById("game-play");
+      const imageElement = document.getElementById("image");
+      const nameInput = document.getElementById("Nametheimage");
+      const submitAnswerButton = document.getElementById("submitAnswer");
+      const resultMessage = document.getElementById("resultMessage");
 
-  if (userAnswer === "") {
-    resultMessage.textContent = "Please enter a dinosaur name.";
-    resultMessage.classList.add("error");
-    setTimeout(() => (resultMessage.textContent = ""), 3000);
-    return; 
-  }
+      function showPage(pageId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => (section.style.display = "none"));
+        document.getElementById(pageId).style.display = "flex";
+      }
 
-  if (userAnswer === correctAnswer) {
-    resultMessage.textContent = "Correct!";
-    resultMessage.classList.add("correct");
-    setTimeout(() => resultMessage.classList.remove("correct"), 5000);
+      function showCategoryMenu() {
+        showPage("categorypage");
+      }
 
-    wrongGuessCount = 0; 
-    currentIndex++;
+      function quitToHomePage() {
+        showPage("homepage");
+      }
 
-    if (currentIndex < flashcards.length) {
-      flashcardElement.classList.add("flashcard-flip");
-      setTimeout(() => {
-        nameInput.value = "";
-        imageElement.src = flashcards[currentIndex].image;
-        flashcardElement.classList.remove("flashcard-flip");
+      document.getElementById("Dinosaur").addEventListener("click", () => {
+        currentFlashcards = flashcards;
+        startGame("How well do you know the Dinosaurs?");
+      });
+
+      document.getElementById("Country").addEventListener("click", () => {
+        currentFlashcards = countryFlashcards;
+        startGame("How well do you know the Countries?");
+      });
+
+      document.getElementById("Insects").addEventListener("click", () => {
+        currentFlashcards = insectsFlashcards;
+        startGame("How well do you know the Insects?");
+      });
+
+      function startGame(title) {
+        document.getElementById("gameTitle").textContent = title;
+        currentIndex = 0;
+        wrongAnswerCount = 0;
+        loadFlashcard();
+        showPage("playgamepage");
+      }
+
+      function loadFlashcard() {
+        imageElement.src = currentFlashcards[currentIndex].image;
+        imageElement.classList.remove("hidden");
         resultMessage.textContent = "";
-      }, 350);
-    } else {
-      resultMessage.textContent =
-        "Congratulations 🎉🎉🎉 You are a dinosaur genius!";
-      flashcardElement.classList.add("hidden");
-      nameInput.classList.add("hidden");
-      submitGuessButton.classList.add("hidden");
-    }
-  } else {
-    resultMessage.textContent = "Sorry, wrong answer.😔 Try again!";
-    wrongGuessCount++;
+        nameInput.value = "";
+      }
 
-    if (wrongGuessCount >= maxWrongGuesses) {
-        let firstThreeLetters = flashcards[currentIndex].answer.substring(0, 3).toUpperCase();
-        let lastTwoLetters = flashcards[currentIndex].answer.slice(-2).toUpperCase(); 
-        resultMessage.textContent = `Here's a hint: The dinosaur's name starts with "${firstThreeLetters}" and ends with "${lastTwoLetters}".`;
-    }
-  }
-});
+      submitAnswerButton.addEventListener("click", () => {
+        const userAnswer = nameInput.value.trim().toLowerCase();
+        const correctAnswer =
+          currentFlashcards[currentIndex].answer.toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+          resultMessage.textContent = "Correct!";
+          currentIndex++;
+
+          if (currentIndex < currentFlashcards.length) {
+            setTimeout(loadFlashcard, 1000);
+          } else {
+            resultMessage.textContent =
+              "Congratulations! You completed the game!";
+            nameInput.classList.add("hidden");
+            submitAnswerButton.classList.add("hidden");
+          }
+        } else {
+          resultMessage.textContent = "Sorry, wrong answer. Try again!";
+          wrongAnswerCount++;
+
+          if (wrongAnswerCount >= maxWrongAnswer) {
+            resultMessage.textContent += ` Hint: Starts with "${correctAnswer
+              .charAt(0)
+              .toUpperCase()}" and ends with "${correctAnswer
+              .charAt(correctAnswer.length - 1)
+              .toLowerCase()}".`;
+          }
+        }
+      });
